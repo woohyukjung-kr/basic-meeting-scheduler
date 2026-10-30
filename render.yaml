@@ -6,7 +6,7 @@
 # otherwise sit in git history forever).
 services:
   - type: web
-    name: wantedlab-meeting-scheduler
+    name: wanted-meeting-scheduler
     runtime: docker
     dockerfilePath: ./Dockerfile
     plan: free
@@ -17,7 +17,7 @@ services:
       - key: ALLOWED_HOSTS
         fromService:
           type: web
-          name: wantedlab-meeting-scheduler
+          name: wanted-meeting-scheduler
           property: host
       # Full https:// URLs, not just the bare host ALLOWED_HOSTS needs - fill
       # these in after the first deploy once you can see the assigned
